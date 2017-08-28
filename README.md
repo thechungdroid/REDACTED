@@ -6,4 +6,4 @@ Press the enter key to select option.
 
 Known Bugs:
 
-Changing difficulty in the options menu after starting a game will not change the difficulty.
+- Changing difficulty in the options menu after starting a game will not change the difficulty.
