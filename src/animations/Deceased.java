@@ -1,8 +1,10 @@
-package redacted;
+package animations;
+import entities.Entity;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
+import ui.HealthBar;
 
 public class Deceased extends Entity {
 	private static final String imagePath = "redacted/resources/deceased_animation_x3.png";

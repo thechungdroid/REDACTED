@@ -1,4 +1,4 @@
-package redacted;
+package animations;
 
 import javafx.animation.Interpolator;
 import javafx.animation.Transition;
@@ -21,10 +21,10 @@ public class SpriteAnimation extends Transition {
     // Must set animation setOnFinished property to stop the animation.
     private boolean isAnimating = false;
 
-    protected boolean isAnimateUp = false;
-    protected boolean isAnimateDown = false;
-    protected boolean isAnimateLeft = false;
-    protected boolean isAnimateRight = false;
+	public boolean isAnimateUp = false;
+    public boolean isAnimateDown = false;
+    public boolean isAnimateLeft = false;
+    public boolean isAnimateRight = false;
 
     public SpriteAnimation(
             ImageView imageView,
@@ -53,7 +53,7 @@ public class SpriteAnimation extends Transition {
         }
     }
 
-    protected void setOffsets(int offsetX, int offsetY) {
+    public void setOffsets(int offsetX, int offsetY) {
     	this.offsetX = offsetX;
     	this.offsetY = offsetY;
     }

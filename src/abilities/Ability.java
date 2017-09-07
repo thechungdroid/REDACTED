@@ -1,4 +1,5 @@
-package redacted;
+package abilities;
+import entities.Entity;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;

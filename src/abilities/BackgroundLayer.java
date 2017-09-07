@@ -1,10 +1,12 @@
-package redacted;
+package abilities;
 import java.util.HashSet;
 import java.util.Set;
 
+import entities.Entity;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import redacted.GameApplication;
 
 public class BackgroundLayer {
 

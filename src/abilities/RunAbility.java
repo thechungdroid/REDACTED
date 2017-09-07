@@ -1,5 +1,7 @@
-package redacted;
+package abilities;
 import java.util.Random;
+
+import entities.Entity;
 
 public class RunAbility extends Ability {
 

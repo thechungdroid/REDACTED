@@ -1,4 +1,6 @@
-package redacted;
+package abilities;
+
+import entities.Entity;
 
 public class BasicHeal extends Ability {
 

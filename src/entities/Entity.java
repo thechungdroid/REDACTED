@@ -1,9 +1,11 @@
-package redacted;
+package entities;
 import java.util.HashSet;
 
+import animations.SpriteAnimation;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import ui.HealthBar;
 
 public abstract class Entity {
 

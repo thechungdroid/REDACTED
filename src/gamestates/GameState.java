@@ -1,6 +1,11 @@
-package redacted;
+package gamestates;
 import java.util.HashSet;
 
+import abilities.BackgroundLayer;
+import animations.Deceased;
+import entities.Entity;
+import entities.Frog;
+import entities.Reaper;
 import javafx.animation.AnimationTimer;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
@@ -17,6 +22,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.paint.Color;
+import redacted.GameApplication;
 
 // The main game state wherein the player traverses the world and engages enemies.
 // This state will either transition into the BattleState.

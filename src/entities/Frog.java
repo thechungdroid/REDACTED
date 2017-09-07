@@ -1,10 +1,20 @@
-package redacted;
+package entities;
 import java.util.ArrayList;
 
+import abilities.Ability;
+import abilities.AdvancedAttack;
+import abilities.BackgroundLayer;
+import abilities.BasicAttack;
+import abilities.BasicHeal;
+import abilities.FireAttack;
+import abilities.RunAbility;
+import animations.SpriteAnimation;
+import gamestates.GameState;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
+import ui.HealthBar;
 
 public class Frog extends Entity {
 

@@ -1,8 +1,10 @@
-package redacted;
+package entities;
+import animations.SpriteAnimation;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
+import ui.HealthBar;
 
 public class Reaper extends Entity {
 

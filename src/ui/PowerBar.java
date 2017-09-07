@@ -1,4 +1,4 @@
-package redacted;
+package ui;
 import javafx.scene.paint.Color;
 
 public class PowerBar extends StatusBar {

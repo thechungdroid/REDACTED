@@ -1,6 +1,15 @@
-package redacted;
+package gamestates;
 import java.util.ArrayList;
 
+import abilities.Ability;
+import abilities.AdvancedAttack;
+import abilities.BackgroundLayer;
+import abilities.BasicAttack;
+import abilities.BasicHeal;
+import abilities.FireAttack;
+import abilities.RunAbility;
+import entities.Entity;
+import entities.Frog;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -18,6 +27,8 @@ import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
+import redacted.GameApplication;
+import ui.HealthBar;
 
 // This state is initialized when the player intersects with an enemy entity in the GameState.
 // This will either transition into the DeathState if the player fails, or back to the GameSate if the player defeats the enemy.
