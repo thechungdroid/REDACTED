@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 import abilities.Ability;
 import abilities.AdvancedAttack;
-import abilities.BackgroundLayer;
 import abilities.BasicAttack;
 import abilities.BasicHeal;
 import abilities.FireAttack;

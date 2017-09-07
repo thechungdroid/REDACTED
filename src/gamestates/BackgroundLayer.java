@@ -1,4 +1,4 @@
-package abilities;
+package gamestates;
 import java.util.HashSet;
 import java.util.Set;
 

@@ -1,7 +1,6 @@
 package gamestates;
 import java.util.HashSet;
 
-import abilities.BackgroundLayer;
 import animations.Deceased;
 import entities.Entity;
 import entities.Frog;
