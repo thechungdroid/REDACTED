@@ -52,6 +52,7 @@ public class GameState {
 	private static Deceased enemy3;
 	private static Deceased enemy4;
 	private static Deceased enemy5;
+	private static Deceased hardEnemy;
 
 	static {
 		gamePane = new Pane();
@@ -70,6 +71,7 @@ public class GameState {
 
 		initBackgrounds();
 		initEntities();
+//		setupMovement();
 
 		setupKeyPresses();
 		setupKeyReleases();
@@ -101,12 +103,16 @@ public class GameState {
 		// Level 1 enemies
 		HashSet<Entity> enemies = new HashSet<Entity>();
 
-		enemy1 = new Reaper();
-		enemy1.getImageView().setX(gamePane.getMinWidth() - gamePane.getMinWidth()/4);
-		enemy1.getImageView().setY(gamePane.getMinHeight()/2);
-		enemy1.getImageView().setViewport(enemy1.getIdleLeft());
-		enemy1.setMovement(0, 1);
-		enemies.add(enemy1);
+		// Easy mode
+		if(GameApplication.getMode() >= 0) {
+			enemy1 = new Reaper();
+			enemy1.getImageView().setX(gamePane.getMinWidth() - gamePane.getMinWidth()/4);
+			enemy1.getImageView().setY(gamePane.getMinHeight()/2);
+			enemy1.getImageView().setViewport(enemy1.getIdleLeft());
+			enemy1.setMovement(0,1);
+			enemies.add(enemy1);
+			// TODO: Remove enemies from higher levels if they are in the scene. Must remove set from background layer.
+		}
 
 		// Normal mode
 		if(GameApplication.getMode() > 0) {
@@ -119,7 +125,7 @@ public class GameState {
 		}
 		// Hard mode
 		if(GameApplication.getMode() > 1) {
-			Entity hardEnemy = new Deceased();
+			hardEnemy = new Deceased();
 			hardEnemy.getImageView().setX((gamePane.getMinWidth()/3));
 			hardEnemy.getImageView().setY(gamePane.getMinHeight()/3);
 			hardEnemy.getImageView().setViewport(hardEnemy.getIdleLeft());
@@ -131,13 +137,16 @@ public class GameState {
 
 		// Level 2 enemies
 		HashSet<Entity> enemies2 = new HashSet<Entity>();
-
-		enemy3 = new Deceased();
-		enemy3.getImageView().setX(gamePane.getMinWidth() - gamePane.getMinWidth()/3);
-		enemy3.getImageView().setY(gamePane.getMinHeight() - gamePane.getMinHeight()/4);
-		enemy3.getImageView().setViewport(enemy3.getIdleFront());
-		enemy3.setMovement(1,0);
-		enemies2.add(enemy3);
+		
+		// Easy mode
+		if(GameApplication.getMode() >= 0) {
+			enemy3 = new Deceased();
+			enemy3.getImageView().setX(gamePane.getMinWidth() - gamePane.getMinWidth()/3 - 5);
+			enemy3.getImageView().setY(gamePane.getMinHeight() - gamePane.getMinHeight()/4 - 50);
+			enemy3.getImageView().setViewport(enemy3.getIdleFront());
+			enemy3.setMovement(0,1);
+			enemies2.add(enemy3);
+		}
 
 		// Normal mode
 		if(GameApplication.getMode() > 0) {
@@ -161,7 +170,8 @@ public class GameState {
 
 		darkStation2.setEnemies(enemies2);
 
-		setupMovement();
+		// Setup movement when game starts
+		 setupMovement();
 	}
 
 	public static void resetBackground(BackgroundLayer background, boolean isReturn) {
@@ -211,7 +221,7 @@ public class GameState {
 		gamePane.getChildren().add(enemy.getImageView());
 	}
 
-	private static void setupMovement() {
+	public static void setupMovement() {
 		// Game loop
 		timer = new AnimationTimer() {
 			@Override

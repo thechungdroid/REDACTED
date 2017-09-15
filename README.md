@@ -7,4 +7,3 @@ Press the enter key to select option.
 Known Bugs:
 
 - Changing difficulty in the options menu after starting a game will not change the difficulty.
-- Enemy in second level is not placed in the scene properly.

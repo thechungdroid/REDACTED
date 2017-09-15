@@ -68,7 +68,7 @@ public class GameApplication extends Application {
 						GameState.resetPlayerPosition();
 						GameState.startAnimationTimer();
 						GameState.playMediaPlayer();
-						stage.setScene(GameState.getScene());
+						stage.setScene(GameState.getScene()); //this inits entities
 					}
 					else if(!IntroState.inModeSelect()){
 						IntroState.changePane(IntroState.getPointer().getLayoutY());

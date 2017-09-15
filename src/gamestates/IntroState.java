@@ -218,6 +218,7 @@ public class IntroState {
 						normalText.setOpacity(0);
 						easyText.setOpacity(0);
 						GameApplication.setMode(2);
+//						GameState.initEntities();
 					}
 					// Normal Mode
 					if (optionPointer.getLayoutY() == optionPointerPos2) {
@@ -225,6 +226,7 @@ public class IntroState {
 						normalText.setOpacity(1);
 						easyText.setOpacity(0);
 						GameApplication.setMode(1);
+//						GameState.initEntities();
 					}
 					// Easy Mode
 					if (optionPointer.getLayoutY() == optionPointerPos3) {
@@ -232,6 +234,7 @@ public class IntroState {
 						normalText.setOpacity(0);
 						easyText.setOpacity(1);
 						GameApplication.setMode(0);
+//						GameState.initEntities();
 					}
 					break;
 				case BACK_SPACE:
