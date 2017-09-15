@@ -178,7 +178,8 @@ public class IntroState {
 		optionPointer.setFill(Color.WHITE);
 
 		optionPointer.setLayoutX(optionPointerXPos);
-		optionPointer.setLayoutY(optionPointerPos1);
+		// Initialize the pointer to point to Normal mode option.
+		optionPointer.setLayoutY(optionPointerPos2);
 
 		hardText = new Text("HARD");
 		hardText.setFont(new Font(34));
@@ -320,6 +321,16 @@ public class IntroState {
 			introScene.addEventHandler(KeyEvent.KEY_PRESSED, modeSelectEventHandler);
 			inMenu = true;
 			inModeSelect = true;
+			// Change the pointer position in options to correspond to current mode.
+			if(GameApplication.getMode() == 0) {
+				optionPointer.setLayoutY(optionPointerPos3);
+			}
+			else if(GameApplication.getMode() == 1) {
+				optionPointer.setLayoutY(optionPointerPos2);
+			}
+			else if(GameApplication.getMode() == 2) {
+				optionPointer.setLayoutY(optionPointerPos1);
+			}
 		} else if(pointerPos == position3) {
 			// Instructions
 			introScene.setRoot(instructionPane);
